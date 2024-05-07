@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta name="description" content="هلدینگ تولیدی بازرگانی PGMA">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PGMA</title>
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="d-flex justify-content-start align-items-center flex-column pt-5" onload="welcomeFunction()">
+    <!-- هد سایت -->
+    <div class="d-flex flex-column justify-content-center align-items-center head" id="nav">
+        <div class="row justify-content-center align-items-center w-100">
+            <div class="d-flex justify-content-center align-items-center N">
+                <div class="Sear" onclick="Search()" id="Sear"><i class="material-icons"
+                        style="font-size: 18px;">search</i></div>
+                <input type="text" class="in1" id="in1" placeholder="جست و جو کنید">
+            </div>
+            <a href="https://pgma.co/"><img src="Images/logo-pgma2.png" alt="PGMA" name="Brand" width="181"
+                    height="51"></a>
+            <a href="https://pgma.co/product-category/house-sofa/" class="Sign"><i class="material-icons i1"
+                    style="font-size: 18px;">group_add</i>ثبت نام/ ورود</a>
+        </div>
+        <ul class="d-flex row justify-content-center align-items-center btn mt-3">
+            <a class="nav-link mr-2 date" href="#" id="date">ساعت مراجعه</a>
+            <li><a href="https://pgma.co/hyper" class="No1"><i class="material-icons"
+                        style="font-size: 18px;">add_shopping_cart</i>سوپر مارکت</a></li>
+            <li id="H2" onmouseenter="light1()" onmouseleave="light2()"><a
+                    href="https://pgma.co/product-category/lighting/" class="No1"><i class="material-icons"
+                        style="font-size: 18px;">lightbulb_outline</i>روشنایی</a></li>
+            <li id="H3" onmouseenter="dec1()" onmouseleave="dec2()"><a
+                    href="https://pgma.co/product-category/decorative/" class="No1"><i class="material-icons"
+                        style="font-size: 18px;">whatshot</i>دکوراتیو</a></li>
+            <li id="H5" onmouseenter="khab1()" onmouseleave="khab2()"><a
+                    href="https://pgma.co/product-category/bed-services/" class="No1"><i class="material-icons"
+                        style="font-size: 18px;">local_hotel</i>کالای خواب</a></li>
+            <li onmouseenter="qaza1()" onmouseleave="qaza2()"><a href="https://pgma.co/product-category/dinner-service/"
+                    class="No1"><i class="material-icons" style="font-size: 18px;">local_dining</i>سرویس غذا خوری</a>
+            </li>
+            <li onmouseenter="Mobl()" onmouseleave="Mobl2()"><a href="https://pgma.co/product-category/house-sofa/"
+                    class="No1"><i class="material-icons" style="font-size: 18px;">weekend</i>مبلمان</a></li>
+            <div class="top-right-slide">
+                <div class="inner-container-top">
+                    <a href="https://pgma.co/" class="nav-links">خانه</a>
+                </div>
+            </div>
+            <div class="middle-right-slide">
+                <div class="inner-container-middle">
+                    <a href="https://pgma.co/%d9%85%d9%82%d8%a7%d9%84%d8%a7%d8%aa/" class="nav-links">مقالات</a>
+                </div>
+            </div>
+            <div class="bottom-right-slide">
+                <div class="inner-container-bottom">
+                    <a href="https://pgma.co/user-profile/" class="nav-links">ورود/ثبت نام</a>
+                </div>
+            </div>
+
+            <div class="top-left-slide">
+                <div class="inner-container-left-top">
+                    <a href="https://pgma.co/product-category/home-supply/" class="nav-links">لوازم خانگی</a>
+                </div>
+            </div>
+            <div class="bottom-left-slide">
+                <div class="inner-container-left-bottom">
+                    <a href="https://pgma.co/hyper" class="nav-links">سوپر مارکت</a>
+                </div>
+            </div>
+
+            <div class="menu-btn">
+                <div class="eks-one"></div>
+                <div class="eks-two"></div>
+                <div class="eks-three"></div>
+            </div>
+        </ul>
+    </div>
+    <div id="Mobl" onmouseenter="Mobl3()" onmouseleave="Mobl4()" dir="rtl">
+        <p class="par3">مبلمان</p>
+        <ul class="mobleman">
+            <a href="#" class="No2">
+                <li>راحتی</li>
+            </a>
+            <a href="#" class="No2">
+                <li>کلاسیک</li>
+            </a>
+            <a href="#" class="No2">
+                <li>استیل</li>
+            </a>
+            <a href="#" class="No2">
+                <li>ال</li>
+            </a>
+            <a href="#" class="No2">
+                <li>تخت خواب شو</li>
+            </a>
+            <a href="#" class="No2">
+                <li>تاب</li>
+            </a>
+        </ul>
+    </div>
+    <div id="qaza" onmouseenter="qaza3()" onmouseleave="qaza4()">
+        <p class="par4">سرویس غذا خوری</p>
+        <ul class="qazakhori"><a href="#" class="No3">
+                <li>میز غذاخوری</li>
+            </a>
+            <a href="#" class="No3">
+                <li>صندلی غذاخوری</li>
+            </a>
+        </ul>
+    </div>
+    <div id="khab" onmouseenter="khab3()" onmouseleave="khab4()" dir="rtl">
+        <div class="No4">
+            <p class="par5">سرویس خواب</p>
+            <ul class="mobleman"><a href="#" class="No5">
+                    <li>بزرگسالان</li>
+                </a>
+                <a href="#" class="No5">
+                    <li>کودک و نوجوان</li>
+                </a>
+            </ul>
+        </div>
+        <div class="No4">
+            <p class="par5">تشک</p>
+            <ul class="mobleman"><a href="#" class="No5">
+                    <li>تشک خواب</li>
+                </a>
+                <a href="#" class="No5">
+                    <li>فنری</li>
+                </a>
+                <a href="#" class="No5">
+                    <li>طبی</li>
+                </a>
+                <a href="#" class="No5">
+                    <li>سوپر طبی فنری</li>
+                </a>
+            </ul>
+        </div>
+        <div class="No4">
+            <p class="par5">ملزومات خواب</p>
+            <ul class="mobleman"><a href="#" class="No5">
+                    <li>روتختی</li>
+                </a>
+                <a href="#" class="No5">
+                    <li>بالش</li>
+                </a>
+                <a href="#" class="No5">
+                    <li>کاور تشک</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div id="lighting" onmouseenter="light3()" onmouseleave="light4()" dir="rtl">
+        <div class="No4">
+            <p class="par5">لوستر</p>
+            <ul class="mobleman"><a href="#" class="No7">
+                    <li>لوستر مدرن</li>
+                </a>
+                <a href="#" class="No7">
+                    <li>لوستر کلاسیک</li>
+                </a>
+            </ul>
+        </div>
+        <div class="No4">
+            <p class="par5">چراغ خواب</p>
+            <ul class="mobleman"><a href="#" class="No7">
+                    <li>چراغ خواب مدرن</li>
+                </a>
+                <a href="#" class="No7">
+                    <li>چراغ خواب کلاسیک</li>
+                </a>
+            </ul>
+        </div>
+        <div class="No4">
+            <p class="par5">آباژور</p>
+            <ul class="mobleman"><a href="#" class="No7">
+                    <li>آباژور ایستاده</li>
+                </a>
+                <a href="#" class="No7">
+                    <li>آباژور رومیزی</li>
+                </a>
+            </ul>
+        </div>
+        <div class="No4">
+            <p class="par5">دیوار کوب</p>
+            <ul class="mobleman"><a href="#" class="No7">
+                    <li>دیوار کوب مدرن</li>
+                </a>
+                <a href="#" class="No7">
+                    <li>دیوار کوب کلاسیک</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <div id="decorative" onmouseenter="dec3()" onmouseleave="dec4()" dir="rtl">
+        <div class="No4">
+            <p class="par5">تابلو</p>
+            <ul class="mobleman"><a href="#" class="No7">
+                    <li>تابلو بافت</li>
+                </a>
+                <a href="#" class="No7">
+                    <li>تابلو سه بعدی</li>
+                </a>
+                <a href="#" class="No7">
+                    <li>تابلو نقاشی</li>
+                </a>
+            </ul>
+        </div>
+        <div class="No4">
+            <p class="par5">ساعت</p>
+            <ul class="mobleman"><a href="#" class="No7">
+                    <li>ساعت دیواری</li>
+                </a>
+                <a href="#" class="No7">
+                    <li>ساعت ایستاده</li>
+                </a>
+            </ul>
+        </div>
+        <div class="No4">
+            <p class="par5">دکوری</p>
+            <ul class="mobleman"><a href="#" class="No6">
+                    <li>گرامافون</li>
+                </a>
+                <a href="#" class="No6">
+                    <li>تلفن</li>
+                </a>
+                <a href="#" class="No6">
+                    <li>رادیو</li>
+                </a>
+                <a href="#" class="No6">
+                    <li>پارتیشن</li>
+                </a>
+                <a href="#" class="No6">
+                    <li>دکوراتیو</li>
+                </a>
+            </ul>
+        </div>
+        <div class="No4">
+            <p class="par5">ویترین</p>
+            <ul class="mobleman"><a href="#" class="No7">
+                    <li>بوفه</li>
+                </a>
+                <a href="#" class="No7">
+                    <li>استند</li>
+                </a>
+            </ul>
+        </div>
+        <div class="No4">
+            <p class="par5">آینه و کنسول</p>
+            <ul class="mobleman"><a href="#" class="No7">
+                    <li>آینه و کنسول</li>
+                </a>
+                <a href="#" class="No7">
+                    <li>آینه(به زودی)</li>
+                </a>
+                <a href="#" class="No7">
+                    <li>کنسول (به زودی)</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+    <!-- اسلایدر -->
+    <div id="carouselExampleIndicators" class="carousel slide mt-4" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2" class="active"></li>
+            <!-- <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li> -->
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img class="d-block w-100" src="Images/Test.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="Images/Test2.jpg" alt="">
+            </div>
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="Images/Test3.jpg" alt="">
+            </div>
+            <!-- <div class="carousel-item">
+                <img class="d-block w-100" src="Images/4.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="Images/5.jpg" alt="">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="Images/6.jpg" alt="">
+            </div> -->
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">قبلی</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">بعدی</span>
+        </a>
+    </div>
+    <!-- پایین اسلایدر -->
+    <!-- بدنه سایت -->
+    <div class="d-flex flex-column justify-content-center align-items-center">
+        <p class="par1 mt-4">دسته بندی ها</p>
+        <ul class="d-flex row justify-content-center align-items-center DasteA">
+            <li class="Daste"><a href="#" class="d-flex flex-column justify-content-center align-items-center link"><img
+                        src="Images/Test 4.png" alt="" class="Daste1">
+                    <p class="par2">محصولات</p>
+                </a></li>
+            <li class="Daste"><a href="#" class="d-flex flex-column justify-content-center align-items-center link"><img
+                        src="Images/Test 4.png" alt="" class="Daste1">
+                    <p class="par2">محصولات</p>
+                </a></li>
+            <li class="Daste"><a href="#" class="d-flex flex-column justify-content-center align-items-center link"><img
+                        src="Images/Test 4.png" alt="" class="Daste1">
+                    <p class="par2">محصولات</p>
+                </a></li>
+            <li class="Daste"><a href="#" class="d-flex flex-column justify-content-center align-items-center link"><img
+                        src="Images/Test 4.png" alt="" class="Daste1">
+                    <p class="par2">محصولات</p>
+                </a></li>
+            <li class="Daste"><a href="#" class="d-flex flex-column justify-content-center align-items-center link"><img
+                        src="Images/Test 4.png" alt="" class="Daste1">
+                    <p class="par2">محصولات</p>
+                </a></li>
+            <li class="Daste"><a href="#" class="d-flex flex-column justify-content-center align-items-center link"><img
+                        src="Images/Test 4.png" alt="" class="Daste1">
+                    <p class="par2">محصولات</p>
+                </a></li>
+            <li class="Daste"><a href="#" class="d-flex flex-column justify-content-center align-items-center link"><img
+                        src="Images/Test 4.png" alt="" class="Daste1">
+                    <p class="par2">محصولات</p>
+                </a></li>
+            <li class="Daste"><a href="#" class="d-flex flex-column justify-content-center align-items-center link"><img
+                        src="Images/Test 4.png" alt="" class="Daste1">
+                    <p class="par2">محصولات</p>
+                </a></li>
+        </ul>
+    </div>
+    <div class="wrapper mt-4">
+
+        <!-- 1 -->
+        <div class="card card--19">
+            <div class="card__header card__header--19">
+                <img src="Images/Test.jpg" alt="" class="Pic2">
+            </div>
+            <div class="card__body">
+                <h1 class="card__title card__will-animate">محصول شماره 1</h1>
+                <span class="card__subtitle card__will-animate">در حالی که عملکرد تخت شما ممکن است در اولویت باشد، مهم
+                    است که ظاهر و احساس تخت قابل تنظیم
+                    خود را نیز در نظر بگیرید. وقتی از اینکه نیازهای شما را برآورده می کند خوشحال هستید، چه گزینه
+                    هایی برای سر تخت و پارچه موجود است؟ آیا ارائه دهنده نمونه هایی را برای کمک به شما در تصمیم
+                    گیری ارائه می دهد؟به دلیل محدودیت های موجود در بازار ما سعی کردیم در تشکلند تنوع بالای از
+                    تشک های روز دنیا را داشته باشیم ، شما میتوانید از قسمت فروشگاه سایت موجودی های محصولات را چک
+                    کنید.در حالی که عملکرد تخت شما ممکن است در اولویت باشد، مهم است که ظاهر و احساس تخت قابل
+                    تنظیم خود را نیز در نظر بگیرید. وقتی از اینکه نیازهای شما را برآورده می کند خوشحال هستید، چه
+                    گزینه هایی برای سر تخت و پارچه موجود است؟ آیا ارائه دهنده نمونه هایی را برای کمک به شما در
+                    تصمیم گیری ارائه می دهد؟به دلیل محدودیت های موجود در بازار ما سعی کردیم در تشکلند تنوع بالای
+                    از تشک های روز دنیا را داشته باشیم ، شما میتوانید از قسمت فروشگاه سایت موجودی های محصولات را
+                    چک کنید.در حالی که عملکرد تخت شما ممکن است در اولویت باشد، مهم است که ظاهر و احساس تخت قابل
+                    تنظیم خود را نیز در نظر بگیرید. وقتی از اینکه نیازهای شما را برآورده می کند خوشحال هستید، چه
+                    گزینه هایی برای سر تخت و پارچه موجود است؟ آیا ارائه دهنده نمونه هایی را برای کمک به شما در
+                    تصمیم گیری ارائه می دهد؟به دلیل محدودیت های موجود در بازار ما سعی کردیم در تشکلند تنوع بالای
+                    از تشک های روز دنیا را داشته باشیم ، شما میتوانید از قسمت فروشگاه سایت موجودی های محصولات را
+                    چک کنید.</span>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="card card--solstice">
+            <div class="card__header card__header--solstice">
+                <img src="Images/Test.jpg" alt="" class="Pic2">
+            </div>
+            <div class="card__body">
+                <h1 class="card__title card__will-animate">محصول شماره 2</h1>
+                <span class="card__subtitle card__will-animate"></span>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="card card--huarache">
+            <div class="card__header card__header--huarache">
+                <img src="Images/Test.jpg" alt="" class="Pic2">
+            </div>
+            <div class="card__body">
+                <h1 class="card__title card__will-animate">محصول شماره 3</h1>
+                <span class="card__subtitle card__will-animate"></span>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="card card--solstice">
+            <div class="card__header card__header--solstice">
+                <img src="Images/Test.jpg" alt="" class="Pic2">
+            </div>
+            <div class="card__body">
+                <h1 class="card__title card__will-animate">محصول شماره 4</h1>
+                <span class="card__subtitle card__will-animate"></span>
+            </div>
+        </div>
+        <!-- 5 -->
+        <div class="card card--solstice">
+            <div class="card__header card__header--solstice">
+                <img src="Images/Test.jpg" alt="" class="Pic2">
+            </div>
+            <div class="card__body">
+                <h1 class="card__title card__will-animate">محصول شماره 5</h1>
+                <span class="card__subtitle card__will-animate"></span>
+            </div>
+        </div>
+        <!-- 6 -->
+        <div class="card card--solstice">
+            <div class="card__header card__header--solstice">
+                <img src="Images/Test.jpg" alt="" class="Pic2">
+            </div>
+            <div class="card__body">
+                <h1 class="card__title card__will-animate">محصول شماره 6</h1>
+                <span class="card__subtitle card__will-animate"></span>
+            </div>
+        </div>
+        <!-- 7 -->
+        <div class="card card--solstice">
+            <div class="card__header card__header--solstice">
+                <img src="Images/Test.jpg" alt="" class="Pic2">
+            </div>
+            <div class="card__body">
+                <h1 class="card__title card__will-animate">محصول شماره 7</h1>
+                <span class="card__subtitle card__will-animate"></span>
+            </div>
+        </div>
+        <!-- 8 -->
+        <div class="card card--solstice">
+            <div class="card__header card__header--solstice">
+                <img src="Images/Test.jpg" alt="" class="Pic2">
+            </div>
+            <div class="card__body">
+                <h1 class="card__title card__will-animate">محصول شماره 8</h1>
+                <span class="card__subtitle card__will-animate"></span>
+            </div>
+        </div>
+        <!-- 9 -->
+        <div class="card card--solstice">
+            <div class="card__header card__header--solstice">
+                <img src="Images/Test.jpg" alt="" class="Pic2">
+            </div>
+            <div class="card__body">
+                <h1 class="card__title card__will-animate">محصول شماره 9</h1>
+                <span class="card__subtitle card__will-animate"></span>
+            </div>
+        </div>
+        <!-- 10 -->
+        <div class="card card--solstice">
+            <div class="card__header card__header--solstice">
+                <img src="Images/Test.jpg" alt="" class="Pic2">
+            </div>
+            <div class="card__body">
+                <h1 class="card__title card__will-animate">محصول شماره 10</h1>
+                <span class="card__subtitle card__will-animate"></span>
+            </div>
+        </div>
+
+    </div>
+    <div class="cards-placeholder">
+        <div class="cards-placeholder__item"></div>
+        <div class="cards-placeholder__item"></div>
+        <div class="cards-placeholder__item"></div>
+        <div class="cards-placeholder__item"></div>
+        <div class="cards-placeholder__item"></div>
+        <div class="cards-placeholder__item"></div>
+        <div class="cards-placeholder__item"></div>
+        <div class="cards-placeholder__item"></div>
+        <div class="cards-placeholder__item"></div>
+        <div class="cards-placeholder__item"></div>
+    </div>
+    <div class="No11">
+        <span class="No10" style="--Amir:1">P</span>
+        <span class="No10" style="--Amir:2">G</span>
+        <span class="No10" style="--Amir:3">M</span>
+        <span class="No10" style="--Amir:4">A</span>
+    </div>
+    <div class="No8 d-flex flex-column justify-content-end align-items-center">
+        <p class="par1">توضیح شرایط فروش</p>
+        <p class="Tozihat2">اشد، مهم
+            است که ظاهر و احساس تخت قابل تنظیم
+            خود را نیز در نظر بگیرید. وقتی از اینکه نیازهای شما را برآورده می کند خوشحال هستید، چه گزینه
+            هایی برای سر تخت و پارچه موجود است؟ آیا ارائه دهنده نمونه هایی را برای کمک به شما در تصمیم
+            گیری ارائه می دهد؟به دلیل محدودیت های موجود در بازار ما سعی کردیم در تشکلند تنوع بالای از
+            تشک های روز دنیا را داشته باشیم ، شما میتوانید از قسمت فروشگاه سایت موجودی های محصولات را چک
+            کنید.در حالی که عملکرد تخت شما ممکن است در اولویت باشد، مهم است که ظاهر و احساس تخت قابل
+            تنظیم خود را نیز در نظر بگیرید. وقتی از اینکه نیازهای شما را برآورده می کند خوشحال هستید، چه
+            گزینه هایی برای سر تخت و پارچه موجود است؟ آیا ارائه دهنده نمونه هایی را برای کمک به شما در
+            تصمیم گیری ارائه می دهد؟به دلیل محدودیت های موجود در بازار ما سعی کردیم در تشکلند تنوع بالای
+            از تشک های روز دنیا را داشته باشیم ، شما میتوانید از قسمت فروشگاه سایت موجودی های محصولات را
+            چک کنید.در حالی که عملکرد تخت شما ممکن است در اولویت باشد، مهم است که ظاهر و احساس تخت قابل
+            تنظیم خود را نیز در نظر بگیرید. وقتی از اینکه نیازهای شما را برآورده می کند خوشحال هستید، چه
+            گزینه هایی برای سر تخت و پارچه موجود است؟ آیا ارائه دهنده نمونه هایی را برای کمک به شما در
+            تصمیم گیری ارائه می دهد؟به دلیل محدودیت های موجود در بازار ما سعی کردیم در تشکلند تنوع بالای
+            از تشک های روز دنیا را داشته باشیم ، شما میتوانید از قسمت فروشگاه سایت موجودی های محصولات را
+            چک کنید.</p>
+        <div class="d-flex row justify-content-center align-items-center w-100" dir="rtl">
+            <div class="No9">
+                <div class="d-flex flex-column justify-content-center align-items-center w-75">
+                    <p class="par6">24 ماهه</p>
+                    <ul class="d-flex flex-column justify-content-center align-items-start bischar">
+                        <li>بدون سود</li>
+                        <li>بدون کارمزد</li>
+                        <li>20% پیش پرداخت</li>
+                    </ul>
+                </div>
+                <button class="dokme24" type="button">محاسبه 24 ماهه</button>
+            </div>
+            <div class="No9">
+                <div class="d-flex flex-column justify-content-center align-items-center w-75">
+                    <p class="par6">36 ماهه</p>
+                    <ul class="d-flex flex-column justify-content-center align-items-start bischar">
+                        <li>2% سود ماهیانه</li>
+                        <li>بدون کارمزد</li>
+                        <li>20% پیش پرداخت</li>
+                    </ul>
+                </div>
+                <button class="dokme24" type="button">محاسبه 36 ماهه</button>
+            </div>
+            <div class="No9">
+                <div class="d-flex flex-column justify-content-center align-items-center w-75">
+                    <p class="par6">60 ماهه</p>
+                    <ul class="d-flex flex-column justify-content-center align-items-start bischar">
+                        <li>2% سود ماهیانه</li>
+                        <li>بدون کارمزد</li>
+                        <li>20% پیش پرداخت</li>
+                    </ul>
+                </div>
+                <button class="dokme24" type="button">محاسبه 60 ماهه</button>
+            </div>
+        </div>
+    </div>
+    <div class="Tabliq">
+        <a href="#"><img src="Images/میز-غذاخوری.jpg" alt="" class="Pic3"></a>
+        <a href="#"><img src="Images/آباژور.jpg" alt="" class="Pic3"></a>
+    </div>
+    <div class='carousel2 no-gutters'>
+        <input checked='checked' class='carousel__activator' id='carousel-slide-activator-1' name='carousel'
+            type='radio'>
+        <input class='carousel__activator' id='carousel-slide-activator-2' name='carousel' type='radio'>
+        <input class='carousel__activator' id='carousel-slide-activator-3' name='carousel' type='radio'>
+        <div class='carousel__controls'>
+            <label class='carousel__control carousel__control--forward' for='carousel-slide-activator-2'>
+                👉
+            </label>
+        </div>
+        <div class='carousel__controls'>
+            <label class='carousel__control carousel__control--backward' for='carousel-slide-activator-1'>
+                👈
+            </label>
+            <label class='carousel__control carousel__control--forward' for='carousel-slide-activator-3'>
+                👉
+            </label>
+        </div>
+        <div class='carousel__controls'>
+            <label class='carousel__control carousel__control--backward' for='carousel-slide-activator-2'>
+                👈
+            </label>
+        </div>
+        <div class='carousel__screen'>
+            <div class='carousel__track'>
+                <div
+                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                    <div class='demo-content'>
+                        <div class="kart-head"><img
+                                src="Images/LavazemKhanegi/تابلو-فرش-ماشینی-طرح-فرانسوی-کد-PHP-032-پی-جی-ما-275x355.jpg"
+                                alt=""></div>
+                        <div class="kart-body">
+                            <p class="kart-title">محصول شماره 1</p>
+                            <p class="kart-subtitle overflow-auto">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cupiditate laboriosam, voluptate beatae atque architecto
+                                earum
+                                libero accusamus ea ad inventore repudiandae illum, incidunt exercitationem.
+                                Assumenda inventore quia officia, rem quibusdam necessitatibus facere velit
+                                illum
+                                labore ipsum modi odio voluptate mollitia voluptatibus error beatae maiores
+                                cupiditate! Dicta quo aliquam doloremque neque tempora cum at commodi quam?
+                                Tempore,
+                                quibusdam perspiciatis harum perferendis explicabo sapiente eligendi
+                                obcaecati quas
+                                officia quasi saepe, reprehenderit autem debitis nemo? Provident optio ab
+                                magnam
+                                voluptatem autem voluptates obcaecati culpa porro officiis. Rerum voluptatum
+                                nobis
+                                quidem cupiditate voluptatibus reiciendis fugiat aliquid dicta earum quasi
+                                tenetur,
+                                exercitationem expedita repellendus iste!</p>
+                        </div>
+                        <div class="kart-footer">
+                            <button class="See">مشاهده و خرید</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                    <div class='demo-content'>
+                        <div class="kart-head"><img
+                                src="Images/LavazemKhanegi/تابلو-فرش-ماشینی-طرح-فرانسوی-کد-PHP-06-پی-جی-ما-275x355.jpg"
+                                alt=""></div>
+                        <div class="kart-body">
+                            <p class="kart-title">محصول شماره 1</p>
+                            <p class="kart-subtitle overflow-auto">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cupiditate laboriosam, voluptate beatae atque architecto
+                                earum
+                                libero accusamus ea ad inventore repudiandae illum, incidunt exercitationem.
+                                Assumenda inventore quia officia, rem quibusdam necessitatibus facere velit
+                                illum
+                                labore ipsum modi odio voluptate mollitia voluptatibus error beatae maiores
+                                cupiditate! Dicta quo aliquam doloremque neque tempora cum at commodi quam?
+                                Tempore,
+                                quibusdam perspiciatis harum perferendis explicabo sapiente eligendi
+                                obcaecati quas
+                                officia quasi saepe, reprehenderit autem debitis nemo? Provident optio ab
+                                magnam
+                                voluptatem autem voluptates obcaecati culpa porro officiis. Rerum voluptatum
+                                nobis
+                                quidem cupiditate voluptatibus reiciendis fugiat aliquid dicta earum quasi
+                                tenetur,
+                                exercitationem expedita repellendus iste!</p>
+                        </div>
+                        <div class="kart-footer">
+                            <button class="See">مشاهده و خرید</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                    <div class='demo-content'>
+                        <div class="kart-head"><img
+                                src="Images/LavazemKhanegi/تابلو-فرش-ماشینی-منظره-کد-PHP-011-پی-جی-ما-275x355.jpg"
+                                alt=""></div>
+                        <div class="kart-body">
+                            <p class="kart-title">محصول شماره 1</p>
+                            <p class="kart-subtitle overflow-auto">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cupiditate laboriosam, voluptate beatae atque architecto
+                                earum
+                                libero accusamus ea ad inventore repudiandae illum, incidunt exercitationem.
+                                Assumenda inventore quia officia, rem quibusdam necessitatibus facere velit
+                                illum
+                                labore ipsum modi odio voluptate mollitia voluptatibus error beatae maiores
+                                cupiditate! Dicta quo aliquam doloremque neque tempora cum at commodi quam?
+                                Tempore,
+                                quibusdam perspiciatis harum perferendis explicabo sapiente eligendi
+                                obcaecati quas
+                                officia quasi saepe, reprehenderit autem debitis nemo? Provident optio ab
+                                magnam
+                                voluptatem autem voluptates obcaecati culpa porro officiis. Rerum voluptatum
+                                nobis
+                                quidem cupiditate voluptatibus reiciendis fugiat aliquid dicta earum quasi
+                                tenetur,
+                                exercitationem expedita repellendus iste!</p>
+                        </div>
+                        <div class="kart-footer">
+                            <button class="See">مشاهده و خرید</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                    <div class='demo-content'>
+                        <div class="kart-head"><img src="Images/Test 4.png" alt=""></div>
+                        <div class="kart-body">
+                            <p class="kart-title">محصول شماره 1</p>
+                            <p class="kart-subtitle overflow-auto">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cupiditate laboriosam, voluptate beatae atque architecto
+                                earum
+                                libero accusamus ea ad inventore repudiandae illum, incidunt exercitationem.
+                                Assumenda inventore quia officia, rem quibusdam necessitatibus facere velit
+                                illum
+                                labore ipsum modi odio voluptate mollitia voluptatibus error beatae maiores
+                                cupiditate! Dicta quo aliquam doloremque neque tempora cum at commodi quam?
+                                Tempore,
+                                quibusdam perspiciatis harum perferendis explicabo sapiente eligendi
+                                obcaecati quas
+                                officia quasi saepe, reprehenderit autem debitis nemo? Provident optio ab
+                                magnam
+                                voluptatem autem voluptates obcaecati culpa porro officiis. Rerum voluptatum
+                                nobis
+                                quidem cupiditate voluptatibus reiciendis fugiat aliquid dicta earum quasi
+                                tenetur,
+                                exercitationem expedita repellendus iste!</p>
+                        </div>
+                        <div class="kart-footer">
+                            <button class="See">مشاهده و خرید</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                    <div class='demo-content'>
+                        <div class="kart-head"><img src="Images/Test 4.png" alt=""></div>
+                        <div class="kart-body">
+                            <p class="kart-title">محصول شماره 1</p>
+                            <p class="kart-subtitle overflow-auto">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cupiditate laboriosam, voluptate beatae atque architecto
+                                earum
+                                libero accusamus ea ad inventore repudiandae illum, incidunt exercitationem.
+                                Assumenda inventore quia officia, rem quibusdam necessitatibus facere velit
+                                illum
+                                labore ipsum modi odio voluptate mollitia voluptatibus error beatae maiores
+                                cupiditate! Dicta quo aliquam doloremque neque tempora cum at commodi quam?
+                                Tempore,
+                                quibusdam perspiciatis harum perferendis explicabo sapiente eligendi
+                                obcaecati quas
+                                officia quasi saepe, reprehenderit autem debitis nemo? Provident optio ab
+                                magnam
+                                voluptatem autem voluptates obcaecati culpa porro officiis. Rerum voluptatum
+                                nobis
+                                quidem cupiditate voluptatibus reiciendis fugiat aliquid dicta earum quasi
+                                tenetur,
+                                exercitationem expedita repellendus iste!</p>
+                        </div>
+                        <div class="kart-footer">
+                            <button class="See">مشاهده و خرید</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                    <div class='demo-content'>
+                        <div class="kart-head"><img src="Images/Test 4.png" alt=""></div>
+                        <div class="kart-body">
+                            <p class="kart-title">محصول شماره 1</p>
+                            <p class="kart-subtitle overflow-auto">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cupiditate laboriosam, voluptate beatae atque architecto
+                                earum
+                                libero accusamus ea ad inventore repudiandae illum, incidunt exercitationem.
+                                Assumenda inventore quia officia, rem quibusdam necessitatibus facere velit
+                                illum
+                                labore ipsum modi odio voluptate mollitia voluptatibus error beatae maiores
+                                cupiditate! Dicta quo aliquam doloremque neque tempora cum at commodi quam?
+                                Tempore,
+                                quibusdam perspiciatis harum perferendis explicabo sapiente eligendi
+                                obcaecati quas
+                                officia quasi saepe, reprehenderit autem debitis nemo? Provident optio ab
+                                magnam
+                                voluptatem autem voluptates obcaecati culpa porro officiis. Rerum voluptatum
+                                nobis
+                                quidem cupiditate voluptatibus reiciendis fugiat aliquid dicta earum quasi
+                                tenetur,
+                                exercitationem expedita repellendus iste!</p>
+                        </div>
+                        <div class="kart-footer">
+                            <button class="See">مشاهده و خرید</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                    <div class='demo-content'>
+                        <div class="kart-head"><img src="Images/Test 4.png" alt=""></div>
+                        <div class="kart-body">
+                            <p class="kart-title">محصول شماره 1</p>
+                            <p class="kart-subtitle overflow-auto">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cupiditate laboriosam, voluptate beatae atque architecto
+                                earum
+                                libero accusamus ea ad inventore repudiandae illum, incidunt exercitationem.
+                                Assumenda inventore quia officia, rem quibusdam necessitatibus facere velit
+                                illum
+                                labore ipsum modi odio voluptate mollitia voluptatibus error beatae maiores
+                                cupiditate! Dicta quo aliquam doloremque neque tempora cum at commodi quam?
+                                Tempore,
+                                quibusdam perspiciatis harum perferendis explicabo sapiente eligendi
+                                obcaecati quas
+                                officia quasi saepe, reprehenderit autem debitis nemo? Provident optio ab
+                                magnam
+                                voluptatem autem voluptates obcaecati culpa porro officiis. Rerum voluptatum
+                                nobis
+                                quidem cupiditate voluptatibus reiciendis fugiat aliquid dicta earum quasi
+                                tenetur,
+                                exercitationem expedita repellendus iste!</p>
+                        </div>
+                        <div class="kart-footer">
+                            <button class="See">مشاهده و خرید</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                    <div class='demo-content'>
+                        <div class="kart-head"><img src="Images/Test 4.png" alt=""></div>
+                        <div class="kart-body">
+                            <p class="kart-title">محصول شماره 1</p>
+                            <p class="kart-subtitle overflow-auto">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cupiditate laboriosam, voluptate beatae atque architecto
+                                earum
+                                libero accusamus ea ad inventore repudiandae illum, incidunt exercitationem.
+                                Assumenda inventore quia officia, rem quibusdam necessitatibus facere velit
+                                illum
+                                labore ipsum modi odio voluptate mollitia voluptatibus error beatae maiores
+                                cupiditate! Dicta quo aliquam doloremque neque tempora cum at commodi quam?
+                                Tempore,
+                                quibusdam perspiciatis harum perferendis explicabo sapiente eligendi
+                                obcaecati quas
+                                officia quasi saepe, reprehenderit autem debitis nemo? Provident optio ab
+                                magnam
+                                voluptatem autem voluptates obcaecati culpa porro officiis. Rerum voluptatum
+                                nobis
+                                quidem cupiditate voluptatibus reiciendis fugiat aliquid dicta earum quasi
+                                tenetur,
+                                exercitationem expedita repellendus iste!</p>
+                        </div>
+                        <div class="kart-footer">
+                            <button class="See">مشاهده و خرید</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                    <div class='demo-content'>
+                        <div class="kart-head"><img src="Images/Test 4.png" alt=""></div>
+                        <div class="kart-body">
+                            <p class="kart-title">محصول شماره 1</p>
+                            <p class="kart-subtitle overflow-auto">Lorem ipsum dolor sit amet consectetur
+                                adipisicing elit. Cupiditate laboriosam, voluptate beatae atque architecto
+                                earum
+                                libero accusamus ea ad inventore repudiandae illum, incidunt exercitationem.
+                                Assumenda inventore quia officia, rem quibusdam necessitatibus facere velit
+                                illum
+                                labore ipsum modi odio voluptate mollitia voluptatibus error beatae maiores
+                                cupiditate! Dicta quo aliquam doloremque neque tempora cum at commodi quam?
+                                Tempore,
+                                quibusdam perspiciatis harum perferendis explicabo sapiente eligendi
+                                obcaecati quas
+                                officia quasi saepe, reprehenderit autem debitis nemo? Provident optio ab
+                                magnam
+                                voluptatem autem voluptates obcaecati culpa porro officiis. Rerum voluptatum
+                                nobis
+                                quidem cupiditate voluptatibus reiciendis fugiat aliquid dicta earum quasi
+                                tenetur,
+                                exercitationem expedita repellendus iste!</p>
+                        </div>
+                        <div class="kart-footer">
+                            <button class="See">مشاهده و خرید</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Hotspot"><img src="Images/هات-اسپات.jpg" alt=""><button class="hot" onclick="f1()"><i
+                class="material-icons">add</i></button>
+        <div class="info1" id="f1">
+            <p class="par9">دکوراسیون داخلی</p>
+            <button class="btnhot1">خرید محصول</button>
+        </div>
+        <button class="hot2" onclick="f2()"><i class="material-icons">add</i></button>
+        <div class="info2" id="f2">
+            <p class="par9">مبلمان ال</p>
+            <button class="btnhot1">خرید محصول</button>
+        </div>
+        <button class="hot3" onclick="f3()"><i class="material-icons">add</i></button>
+        <div class="info3" id="f3">
+            <p class="par9">آباژور</p>
+            <button class="btnhot1">خرید محصول</button>
+        </div>
+        <button class="hot4" onclick="f4()"><i class="material-icons">add</i></button>
+        <div class="info4" id="f4">
+            <p class="par9">صندلی غذاخوری</p>
+            <button class="btnhot1">خرید محصول</button>
+        </div>
+    </div>
+    <div class="Change1 w-100 mb-5">
+        <div class="d-flex justify-content-center align-items-center lavazem">
+            <div class="placement"><a href="#"><img
+                        src="Images/LavazemKhanegi/لوازم-خانگی-لباسشویی-پی-جی-ما-3-275x355.jpg" alt=""></a></div>
+            <div class="placement"><a href="#"><img
+                        src="Images/LavazemKhanegi/لوازم-خانگی-لباسشویی-پی-جی-ما-3-275x355.jpg" alt=""></a></div>
+            <div class="placement"><a href="#"><img src="Images/LavazemKhanegi/لوازم-خانگی-یخچال-پی-جی-ما-5-275x355.jpg"
+                        alt=""></a></div>
+            <div class="placement"><a href="#"><img src="Images/LavazemKhanegi/لوازم-خانگی-یخچال-پی-جی-ما-5-275x355.jpg"
+                        alt=""></a></div>
+            <div class="placement"><a href="#"><img src="Images/LavazemKhanegi/لوازم-خانگی.jpg" alt=""></a></div>
+            <div class="placement d-flex flex-column justify-content-between align-items-center">
+                <p class="par7">لوازم خانگی</p>
+                <p class="par8 text-center font-weight-bolder">برای مشاهده بقیه محصولات از دکمه زیر استفاده کنید</p>
+                <button class="btn-lavazem">مشاهده بقیه محصولات</button>
+            </div>
+        </div>
+    </div>
+    <div class="Change1 w-100 mb-5" dir="rtl">
+        <div class="d-flex justify-content-center align-items-center lavazem2">
+            <div class="placement"><a href="#"><img
+                        src="Images/LavazemKhanegi/102100785-آینه-کنسول-لیون-پی-جی-ما-275x355.jpg" alt=""></a></div>
+            <div class="placement"><a href="#"><img
+                        src="Images/LavazemKhanegi/102100785-آینه-کنسول-لیون-پی-جی-ما-275x355.jpg" alt=""></a></div>
+            <div class="placement"><a href="#"><img
+                        src="Images/LavazemKhanegi/102100807-آینه-کنسول-کد-K810-پی-جی-ما-1-275x355.jpg" alt=""></a>
+            </div>
+            <div class="placement"><a href="#"><img
+                        src="Images/LavazemKhanegi/102100807-آینه-کنسول-کد-K810-پی-جی-ما-1-275x355.jpg" alt=""></a>
+            </div>
+            <div class="placement"><a href="#"><img
+                        src="Images/LavazemKhanegi/102100829-آینه-کنسول-شینا-پی-جی-ما-275x355.jpg" alt=""></a></div>
+            <div class="placement d-flex flex-column justify-content-between align-items-center">
+                <p class="par7">آینه کنسول</p>
+                <p class="par8 text-center font-weight-bolder">برای مشاهده بقیه محصولات از دکمه زیر استفاده کنید</p>
+                <button class="btn-lavazem">مشاهده بقیه محصولات</button>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center w-100 placement3">
+        <div class="d-flex flex-column justify-content-around align-items-center jashn">
+            <div class="d-flex flex-column justify-content-center align-items-center mb-0">
+                <p class="par7">جشنواره فروش</p>
+                <p class="par8 mb-0 font-weight-bolder"> در این قسمت میتوانید جشنواره های ما را مشاهده کنید</p>
+            </div>
+            <div class="d-flex row justify-content-center align-items-center No12" dir="rtl">
+                <div class="jashn2"><img src="Images/ارسال.jpg" alt=""></div>
+                <!-- <div class="jashn3"></div> -->
+                <div class="jashn4"><img src="Images/اقساطی-گیف.gif" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <div class="Tabliq2"><a href="#"><img src="Images/Tabliq.gif" alt=""></a></div>
+    <!-- JS Links -->
+    <script src="JS/app.js"></script>
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $('.carousel').carousel({
+            interval: 5000
+        })
+    </script>
+</body>
+
+</html>
